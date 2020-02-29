@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    tools {
-        maven 'maven 3.3.9'
-    }
     stages {
         stage('Checkout from GIT') {
             steps {
@@ -27,7 +24,7 @@ pipeline {
         stage('Sonar') {
             steps {
                 echo 'Running Sonar'
-                sh 'mvn sonar:sonar -Dsonar.login=87b7830aca1fdb13e59760203ee5f0492bdab216 org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
+                sh 'mvn sonar:sonar org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
             }
         }
         stage('Create Docker Image') {
