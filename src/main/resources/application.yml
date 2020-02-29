@@ -1,0 +1,8 @@
+user:
+  url: http://localhost:8081/users/all
+  connectTimeout: 1000
+  readTimeout: 1000
+  retryAttempts: 3
+
+server:
+  port: 8080
