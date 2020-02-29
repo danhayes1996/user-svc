@@ -27,7 +27,7 @@ pipeline {
         stage('Sonar') {
             steps {
                 echo 'Running Sonar'
-                sh 'mvn -Psonar -Dsonar.sourceEncoding=UTF-8 org.sonarsource.scanner.maven:sonar-maven-plugin:3.3.9:sonar'
+                sh 'mvn -Psonar org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
             }
         }
         stage('Create Docker Image') {
