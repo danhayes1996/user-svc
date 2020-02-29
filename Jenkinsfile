@@ -27,7 +27,7 @@ pipeline {
         stage('Sonar') {
             steps {
                 echo 'Running Sonar'
-                sh 'mvn -Psonar -Dsonar.host.url=http://sonarqube:9000 org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
+                sh 'mvn -Psonar -Dsonar.host.url=http://127.0.0.1:9000 org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
             }
         }
         stage('Create Docker Image') {
