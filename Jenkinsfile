@@ -27,7 +27,7 @@ pipeline {
         stage('Sonar') {
             steps {
                 echo 'Running Sonar'
-                sh 'mvn sonar:sonar org.sonarsource.scanner.maven:sonar-maven-plugin:3.6.0.1398:sonar'
+                sh 'mvn sonar:sonar'
             }
         }
         stage('Create Docker Image') {
